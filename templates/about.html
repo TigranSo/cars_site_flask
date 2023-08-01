@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>Заказать автомобиль</title>
+{% endblock %}
+
+{% block body %}
+
+<section class="bg-dark text-light p-5">
+  <div class="container">
+    <h1>Заказать автомобиль</h1>
+    <p class="lead">Заполните форму ниже, чтобы заказать автомобиль.</p>
+  </div>
+</section>
+
+<section class="py-5">
+  <div class="container">
+    <form method="post">
+      <div class="form-group">
+        <label for="first_name" class="text-light">Имя</label>
+        <input type="text" name="first_name" id="first_name" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label for="telephone" class="text-light">Телефон</label>
+        <input type="text" name="telephone" id="telephone" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label for="model_car" class="text-light">Модель автомобиля</label>
+        <input type="text" name="model_car" id="model_car" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label for="date_v" class="text-light">Дата выпуска</label>
+        <input type="date" name="date_v" id="date_v" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label for="new_old" class="text-light">Новый или старый</label>
+        <select name="new_old" id="new_old" class="form-control" required>
+          <option value="">Выберите</option>
+          <option value="Новый">Новый</option>
+          <option value="Старый">Старый</option>
+        </select>
+      </div>
+      <br>
+      <button type="submit" class="btn btn-primary">Отправить</button>
+    </form>
+  </div>
+</section>
+
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+
+{% endblock %}

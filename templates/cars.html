@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>Автомобили</title>
+{% endblock %}
+
+{% block body %}
+<br></br>
+<section class="jumbotron text-center" style="color: white;" >
+  <div class="container" >
+    <h1 class="jumbotron-heading" >Наши автомобили</h1>
+  </div>
+</section>
+<br></br>
+<section class="py-5 text-center container" >
+  
+    <div class="jumbotron text-center" >
+    <div class="container">
+      <div class="row" >
+        {% for car in catalog %}
+        <div class="col-md-4" >
+          <div class="card mb-4 box-shadow" style="background-color: #2cbdd0;">
+            <img class="card-img-top" src="{{ url_for('static', filename='images/car5.jpg') }}" alt="Car 1">
+            <div class="card-body">
+              <p class="card-text">{{ car.name_car }}</p>
+              <p class="card-text">Цвет: {{ car.color }}</p>
+              <p class="card-text">Дата выпуска: {{ car.date_v }}</p>
+              <p class="card-text">Цена: {{ car.price }}</p>
+              <p class="card-text">Страна: {{ car.contry }}</p>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+
+{% endblock %}
